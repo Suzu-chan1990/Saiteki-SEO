@@ -96,7 +96,7 @@ add_action( 'plugins_loaded', function () {
     }
 
     $updateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
-        'https://github.com/Suzu-chan1990/Saiteki-SEO-/',
+        'https://github.com/Suzu-chan1990/Saiteki-SEO/',
         __FILE__,
         'saiteki'
     );
