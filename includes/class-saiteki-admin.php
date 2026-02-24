@@ -110,7 +110,7 @@ class Saiteki_Admin {
         $hydro_active = function_exists('hydro_create_or_get_shortlink');
         $decrypted_indexnow = Saiteki_Crypto::decrypt($old_options['indexnow_key']);
         
-        // --- Health Audit Abfragen (nur wenn <?php esc_html_e( 'active', 'saiteki' ); ?>iert) ---
+        // --- Health Audit Abfragen (nur wenn aktiviert) ---
         global $wpdb;
         $health_thumbs_count = false;
         $health_desc_count = false;
@@ -188,7 +188,7 @@ class Saiteki_Admin {
                             <?php endif; ?>
                             
                             <p style="font-size: 12px; color: var(--muted); margin-top: 15px; margin-bottom: 0;">
-                                <em>Note: If you no longer need these checks, de<?php esc_html_e( 'active', 'saiteki' ); ?>iere sie im "Core Modules" Tab, um die Datenbankabfragen komplett zu stoppen.</em>
+                                <em>Note: If you no longer need these checks, deaktiviere sie im "Core Modules" Tab, um die Datenbankabfragen komplett zu stoppen.</em>
                             </p>
                         </div>
                         <?php endif; ?>
