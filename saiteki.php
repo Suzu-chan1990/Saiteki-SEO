@@ -96,7 +96,7 @@ add_action( 'plugins_loaded', function () {
     }
 
     $updateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
-        'https://github.com/Suzu-chan1990/Saiteki-SEO',
+        'https://github.com/Suzu-chan1990/Saiteki-SEO-/',
         __FILE__,
         'saiteki'
     );
@@ -104,5 +104,12 @@ add_action( 'plugins_loaded', function () {
     // Empfohlen: nutze Release Assets (ZIP) statt "Source code.zip"
     $updateChecker->getVcsApi()->enableReleaseAssets();
 
+
+    // Optional (empfohlen): GitHub Token gegen 403/Ratelimits.
+    // Token NICHT ins Repo hardcoden. Stattdessen in wp-config.php setzen:
+    // define('SAITEKI_GITHUB_TOKEN', 'github_pat_...'); 
+    if ( defined( 'SAITEKI_GITHUB_TOKEN' ) && SAITEKI_GITHUB_TOKEN ) {
+        $updateChecker->setAuthentication( SAITEKI_GITHUB_TOKEN );
+    }
 }, 20 );
 
