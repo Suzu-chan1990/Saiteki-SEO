@@ -1,0 +1,100 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+class Saiteki_Sitemap {
+    public static function init() {
+        add_filter( 'wp_sitemaps_enabled', '__return_false' );
+        add_action( 'template_redirect', array( __CLASS__, 'intercept_request' ), 1 );
+    }
+
+    public static function intercept_request() {
+        $uri = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
+        if ( strpos( $uri, '/appurodo/saito-mappu/sitemap_index.xml' ) !== false ) {
+            self::render_index();
+            exit;
+        } 
+        elseif ( preg_match( '#/appurodo/saito-mappu/sitemap-([0-9]+)\.xml#', $uri, $matches ) ) {
+            self::render_chunk( intval( $matches[1] ) );
+            exit;
+        }
+    }
+
+    private static function render_index() {
+        global $wpdb;
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+        $total = (int) $wpdb->get_var("SELECT COUNT(ID) FROM {$wpdb->posts} WHERE post_status = 'publish' AND post_type = 'post'");
+        
+        $limit = 5000;
+        $pages = ceil( $total / $limit );
+        if ( $pages == 0 ) $pages = 1;
+        
+        $base_url = home_url('/appurodo/saito-mappu/');
+        $now = gmdate('c');
+
+        header( 'Content-Type: text/xml; charset=utf-8' );
+        echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        echo '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+        for ( $i = 1; $i <= $pages; $i++ ) {
+            echo '<sitemap>\n<loc>' . esc_url( $base_url . 'sitemap-' . $i . '.xml' ) . '</loc>\n<lastmod>' . esc_html( $now ) . '</lastmod>\n</sitemap>\n';
+        }
+        echo '</sitemapindex>';
+    }
+
+    private static function render_chunk( $page ) {
+        global $wpdb;
+        $limit = 5000;
+        $offset = ( $page - 1 ) * $limit;
+        
+        // Holt IDs, Titel und Datum per Raw SQL
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+        $posts = $wpdb->get_results( $wpdb->prepare(
+            "SELECT ID, post_title, post_modified FROM {$wpdb->posts} WHERE post_status = 'publish' AND post_type = 'post' ORDER BY ID DESC LIMIT %d OFFSET %d",
+            $limit, $offset
+        ) );
+
+        // High-Performance: Lädt alle Post-Metadaten (Thumbnails, Video-IDs) für die 5000 Posts in EINEM einzigen Query in den RAM!
+        if ( !empty($posts) ) {
+            update_meta_cache( 'post', wp_list_pluck( $posts, 'ID' ) );
+        }
+
+        header( 'Content-Type: text/xml; charset=utf-8' );
+        echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">' . "\n";
+        
+        foreach ( $posts as $p ) {
+            $url = get_permalink( $p->ID );
+            $title = esc_html( $p->post_title );
+            
+            // Greift jetzt dank update_meta_cache ohne neue DB-Anfragen direkt auf den RAM zu
+            $image_url = get_the_post_thumbnail_url( $p->ID, 'full' );
+            $turbo = function_exists('jpop_get_turbo_video') ? jpop_get_turbo_video($p->ID) : false;
+            $video_id = ($turbo && !empty($turbo['video_id'])) ? $turbo['video_id'] : '';
+
+            echo '<url>' . "\n";
+            echo '<loc>' . esc_url( $url ) . '</loc>' . "\n";
+            echo '<lastmod>' . esc_html( mysql2date( 'Y-m-d\TH:i:s+00:00', $p->post_modified, false ) ) . '</lastmod>' . "\n";
+            
+            // Image Namespace
+            if ( $image_url ) {
+                echo '  <image:image>\n';
+                echo '    <image:loc>' . esc_url( $image_url ) . '</image:loc>\n';
+                echo '    <image:title>' . esc_html( $p->post_title ) . '</image:title>\n';
+                echo '  </image:image>\n';
+            }
+            
+            // Video Namespace
+            if ( $video_id ) {
+                echo '  <video:video>\n';
+                echo '    <video:thumbnail_loc>https://img.youtube.com/vi/' . esc_attr($video_id) . '/maxresdefault.jpg</video:thumbnail_loc>\n';
+                echo '    <video:title>' . esc_html( $p->post_title ) . '</video:title>\n';
+                echo '    <video:description>' . esc_html( 'Video von ' . $p->post_title ) . '</video:description>\n';
+                echo '    <video:player_loc>https://www.youtube.com/embed/' . esc_attr($video_id) . '</video:player_loc>\n';
+                echo '  </video:video>\n';
+            }
+            
+            echo '</url>' . "\n";
+        }
+        
+        echo '</urlset>';
+    }
+}

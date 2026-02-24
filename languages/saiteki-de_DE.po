@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Saiteki SEO 1.1.0\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Saiteki SEO"
+msgstr "Saiteki SEO"
+
+msgid "Saiteki"
+msgstr "Saiteki"
+
+msgid "Settings successfully saved!"
+msgstr "Einstellungen erfolgreich gespeichert!"
+
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+msgid "🩺 SEO Health Audit"
+msgstr "🩺 SEO Health Audit"
+
+msgid "Videos without featured image (Thumbnail):"
+msgstr "Videos ohne Vorschaubild (Thumbnail):"
+
+msgid "Videos with extremely short description (< 100 characters):"
+msgstr "Videos mit extrem kurzer Beschreibung (< 100 Zeichen):"
+
+msgid "Note: If you no longer need these checks, disable them in the \"Core Modules\" tab to completely stop the database queries."
+msgstr "Hinweis: Wenn du diese Checks nicht mehr brauchst, deaktiviere sie im \"Core Module\" Tab, um die Datenbankabfragen komplett zu stoppen."
+
+msgid "Background Processes"
+msgstr "Hintergrund-Prozesse"
+
+msgid "SEO Audit: Missing Thumbnails"
+msgstr "SEO Audit: Fehlende Thumbnails"
+
+msgid "Checks the database for videos without their own featured image and shows the result in the dashboard."
+msgstr "Prüft die Datenbank auf Videos ohne eigenes Beitragsbild und zeigt das Ergebnis im Dashboard an."
+
+msgid "Optional"
+msgstr "Optional"
+
+msgid "SEO Audit: Short Descriptions"
+msgstr "SEO Audit: Kurze Beschreibungen"
+
+msgid "Checks the database for posts with less than 100 characters of text content."
+msgstr "Prüft die Datenbank auf Beiträge mit weniger als 100 Zeichen Textinhalt."
+
+msgid "Frontend Tags"
+msgstr "Frontend Tags"
+
+msgid "Dynamic Titles"
+msgstr "Dynamische Titel"
+
+msgid "APIs & Indexing"
+msgstr "APIs & Indexing"
+
+msgid "Connected"
+msgstr "Verbunden"
+
+msgid "active"
+msgstr "aktiv"
+
+msgid "For <b>Multi-Key Rotation</b> (limit bypass), you can simply copy the contents of any number of JSON files directly one after the other into this field."
+msgstr "Für <b>Multi-Key Rotation</b> (Limit-Bypass) kannst du den Inhalt von beliebig vielen JSON-Dateien einfach direkt nacheinander in dieses Feld kopieren."
+
+msgid "Paste multiple JSONs here one below the other..."
+msgstr "Mehrere JSONs hier untereinander einfügen..."
+
+msgid "Watch %s on vTubes.tokyo."
+msgstr "Schau dir %s auf vTubes.tokyo an."
+
+msgid "All videos from the category %s on vTubes.tokyo."
+msgstr "Alle Videos aus der Kategorie %s auf vTubes.tokyo."
+
+msgid "Video archive for the tag %s"
+msgstr "Video-Archiv für das Schlagwort %s"
+
+msgid "Video of %s"
+msgstr "Video von %s"

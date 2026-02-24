@@ -1,0 +1,57 @@
+/* admin.css v2.0 - Hydro Shortlinks (full) */
+.hydro-admin-wrap { padding: 18px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; color: #0f1720; background: #ffffff; }
+:root.hydro-dark { --bg: #0f1720; --surface: rgba(20,22,26,0.86); --card: rgba(18,20,24,0.88); --text: #e6eef6; --muted: #9aa4b2; --primary: #06b6d4; --accent: #7c3aed; --border: rgba(255,255,255,0.04); --glass: rgba(255,255,255,0.06); }
+:root { --bg: #ffffff; --surface: #ffffff; --card: rgba(255,255,255,0.85); --text: #0f1720; --muted: #6b7280; --primary: #06b6d4; --accent: #7c3aed; --border: #e6e9ee; --glass: rgba(255,255,255,0.6); }
+.hydro-app{ color:var(--text); background:var(--bg); }
+.hydro-top-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.hydro-top-row h1{margin:0;font-size:20px}
+.hydro-sub{color:var(--muted);margin:4px 0 0 0;font-size:13px}
+.hydro-stats-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.hydro-card{background:var(--card);border:1px solid var(--border);padding:12px 14px;border-radius:12px;min-width:140px;box-shadow:0 8px 24px rgba(2,6,23,0.06)}
+.hydro-card .label{font-size:12px;color:var(--muted)}
+.hydro-card .value{font-size:18px;font-weight:700;margin-top:6px}
+.hydro-controls-row{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
+.hydro-search{padding:8px 12px;border-radius:8px;border:1px solid var(--border);width:320px;background:var(--surface);color:var(--text)}
+.hydro-btn{padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer}
+.hydro-btn-primary{background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;border:none}
+.hydro-list{border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:12px}
+.hydro-row{display:grid;grid-template-columns:1.1fr 2fr 0.6fr 0.6fr 0.9fr 0.9fr;gap:12px;padding:10px 14px;align-items:center;border-bottom:1px solid var(--border);transition:background .12s ease}
+.hydro-row.header{background:var(--glass);font-weight:700;color:var(--muted);font-size:13px}
+.shortlink-text{color:var(--text);font-weight:600;text-decoration:none;display:inline-block;margin-right:8px}
+.copy-btn{padding:6px 8px;border-radius:8px;background:#f3f4f6;border:1px solid var(--border);cursor:pointer;font-size:13px}
+:root.hydro-dark .copy-btn{background:#1f2937;color:var(--text);border:1px solid var(--border)}
+.col-url{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.hydro-actions{display:flex;gap:8px;justify-self:end}
+.hydro-action{padding:8px 10px;border-radius:8px;border:none;color:#fff;cursor:pointer;font-size:13px}
+.hydro-action.analytics{background:linear-gradient(90deg,var(--primary),var(--accent))}
+.hydro-action.delete,a.hydro-action.delete{background:#ef4444;color:#fff;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;padding:8px 10px}
+.hydro-pagination{margin-top:12px;display:flex;justify-content:center;align-items:center;gap:12px}
+.pager-btn{padding:8px 12px;border-radius:8px;background:transparent;border:1px solid var(--border);cursor:pointer;color:var(--text);text-decoration:none}
+.pager-info{color:var(--muted)}
+.hydro-toast{position:fixed;right:16px;bottom:16px;background:rgba(0,0,0,0.75);color:#fff;padding:8px 12px;border-radius:8px;z-index:99999}
+
+/* Modal */
+.hydro-modal-backdrop{display:none;position:fixed;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.35));backdrop-filter: blur(6px);z-index:99998;align-items:center;justify-content:center;padding:20px}
+.hydro-modal{width:min(1100px,100%);max-height:86%;overflow:auto;background:var(--surface);border-radius:14px;padding:18px;border:1px solid var(--border);color:var(--text);box-shadow:0 28px 80px rgba(2,6,23,0.45)}
+.hydro-modal .modal-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.hydro-modal .modal-title{font-size:18px;font-weight:700}
+.hydro-modal .modal-close{background:transparent;border:none;font-size:18px;cursor:pointer;color:var(--muted)}
+
+/* Analytics */
+.hydro-analytics-grid{display:grid;grid-template-columns:280px 1fr;gap:12px;align-items:start}
+@media (max-width:960px){ .hydro-analytics-grid{grid-template-columns:1fr; } }
+.hydro-analytics-summary{background:var(--card);padding:12px;border-radius:12px;min-height:160px;box-shadow:0 8px 24px rgba(2,6,23,0.04)}
+.hydro-analytics-summary .big-num{font-size:28px;font-weight:800;margin:6px 0}
+.hydro-analytics-summary .small-muted{color:var(--muted);font-size:13px}
+.hydro-analytics-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:680px){ .hydro-analytics-cards{grid-template-columns:1fr} }
+.hydro-analytics-card{background:var(--card);padding:10px;border-radius:10px;box-shadow:0 8px 22px rgba(2,6,23,0.04);min-height:150px}
+.hydro-analytics-card h4{margin:0 0 8px 0;font-size:14px;color:var(--muted)}
+.hydro-chart-canvas{width:100% !important;height:170px !important}
+.hydro-tabs{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.hydro-tab{padding:8px 10px;border-radius:10px;background:transparent;border:1px solid transparent;color:var(--muted);cursor:pointer}
+.hydro-tab.active{background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;border-color:transparent}
+.hydro-list-compact{padding:8px 0;margin:0;list-style:none}
+.hydro-list-compact li{padding:4px 0;border-bottom:1px dashed rgba(0,0,0,0.03);font-size:13px;color:var(--muted)}
+.hydro-fade-in{animation:hydroFade .22s ease-out}
+@keyframes hydroFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
