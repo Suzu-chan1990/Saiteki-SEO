@@ -3,7 +3,7 @@
  * Plugin Name:       Saiteki SEO
  * Plugin URI:        https://github.com/Suzu-chan1990/Saiteki-SEO-/
  * Description:       Fast and lightweight SEO plugin for video-focused WordPress sites with dynamic schema, XML sitemaps, and optional instant indexing support.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            すずちゃん
@@ -18,7 +18,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'SAITEKI_VERSION', '1.1.1' );
+define( 'SAITEKI_VERSION', '1.1.2' );
 define( 'SAITEKI_PATH', plugin_dir_path( __FILE__ ) );
 define( 'SAITEKI_URL', plugin_dir_url( __FILE__ ) );
 

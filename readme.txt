@@ -2,7 +2,7 @@
 Contributors: suzuchan
 Requires at least: 5.8
 Tested up to: 6.9
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,16 +52,3 @@ Saiteki can send indexing requests to supported APIs when new content is publish
 
 = Why are tag archives set to noindex? =
 This helps search engines prioritize primary content instead of thin archive pages.
-
-== Changelog ==
-
-= 1.1.0 =
-
-* Added full i18n translation support.
-* Introduced SEO Health Audit module.
-* Improved sitemap compatibility with Google Video guidelines.
-* Fixed WordPress Coding Standards notices and timezone handling.
-
-= 1.0.0 =
-
-* Initial release.

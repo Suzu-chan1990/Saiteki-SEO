@@ -2,7 +2,7 @@
 Contributors: suzuchan
 Requires at least: 5.8
 Tested up to: 6.9
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,10 @@ Saiteki can send indexing requests to supported APIs when new content is publish
 This helps search engines prioritize primary content.
 
 == Changelog ==
+
+= 1.1.2 =
+
+* Fixed Auto Upater
 
 = 1.1.1 =
 
