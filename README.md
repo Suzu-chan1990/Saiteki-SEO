@@ -1,13 +1,8 @@
-[![WordPress Version](https://img.shields.io/badge/WordPress-6.0%2B-blue.svg)](https://wordpress.org/)
-[![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-8A2BE2.svg)](https://php.net/)
-[![License](https://img.shields.io/badge/License-GPLv2-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
-[![Version](https://img.shields.io/badge/Version-1.1.2-orange.svg)]()
-
 === Saiteki SEO ===
-Contributors: suzuchan
-Requires at least: 5.8
-Tested up to: 6.9
-Stable tag: 1.1.2
+Contributors: Saguya
+Requires at least: 6.9
+Tested up to: 7.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,7 +53,20 @@ Saiteki can send indexing requests to supported APIs when new content is publish
 = Why are tag archives set to noindex? =
 This helps search engines prioritize primary content.
 
-== Changelog ==
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [1.2.0]
+
+### Added
+- **Dedicated High-Performance Database Table**: Created a custom storage table (`wp_saiteki_settings`) to manage all plugin configurations and key rotation states, significantly reducing the size and clutter of the native `wp_options` table.
+- **High-Speed RAM Caching Engine**: Implemented an advanced internal caching layer combining static PHP variables and the WordPress Object Cache API (`wp_cache_get` / `wp_cache_set`). All settings are now fetched in a single database query per request, drastically optimizing Time to First Byte (TTFB) for high-volume traffic.
+- **Fail-Safe Passive Migration**: Integrated an intelligent runtime migration fallback. The plugin securely reads legacy data from `wp_options` if the custom table entry is missing, copies it seamlessly to the new structure, and preserves original entries to guarantee zero data loss on live production environments.
+
+### Changed
+- **Google Indexing API Key Rotation Infrastructure**: Relocated separate tracking options (`saiteki_google_key_count` and `saiteki_google_key_index`) into the unified custom settings table architecture, fully streamlining database transactions during real-time API indexing requests.
+- **Under-the-Hood Option Handling**: Rewrote core configuration retrieval to leverage the new `saiteki_get_setting()` and `saiteki_update_setting()` framework instead of standard `get_option()` hooks.
 
 = 1.1.2 =
 

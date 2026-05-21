@@ -11,7 +11,7 @@ class Saiteki_Indexing {
         if ( empty( self::$options['indexnow_key'] ) ) {
             $new_key = md5( uniqid( wp_rand(), true ) );
             self::$options['indexnow_key'] = Saiteki_Crypto::encrypt( $new_key );
-            update_option( 'saiteki_settings', self::$options );
+            saiteki_update_setting( 'saiteki_settings', self::$options );
         }
 
         add_action( 'template_redirect', array( __CLASS__, 'serve_indexnow_txt' ), 1 );
@@ -65,9 +65,9 @@ class Saiteki_Indexing {
         // Auto-Rotation für Multi-Keys
         if ( isset($json_data[0]) && is_array($json_data[0]) ) {
             $total_keys = count($json_data);
-            $current_index = (int) get_option('saiteki_google_key_index', 0);
+            $current_index = (int) saiteki_get_setting('saiteki_google_key_index', 0);
             $active_key = $json_data[ $current_index % $total_keys ];
-            update_option('saiteki_google_key_index', $current_index + 1);
+            saiteki_update_setting('saiteki_google_key_index', $current_index + 1);
         } else {
             $active_key = $json_data;
         }

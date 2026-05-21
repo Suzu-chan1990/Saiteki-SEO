@@ -82,11 +82,11 @@ class Saiteki_Admin {
                 
                 if (is_array($parsed) && count($parsed) > 0 && isset($parsed[0]['private_key'])) {
                     $final_json_key = Saiteki_Crypto::encrypt(wp_json_encode($parsed));
-                    update_option('saiteki_google_key_count', count($parsed));
-                    update_option('saiteki_google_key_index', 0); // Rotation zurücksetzen
+                    saiteki_update_setting('saiteki_google_key_count', count($parsed));
+                    saiteki_update_setting('saiteki_google_key_index', 0); // Rotation zurücksetzen
                 } else {
                     $final_json_key = Saiteki_Crypto::encrypt($in_json);
-                    update_option('saiteki_google_key_count', 1);
+                    saiteki_update_setting('saiteki_google_key_count', 1);
                 }
             }
 
@@ -102,7 +102,7 @@ class Saiteki_Admin {
                 'indexnow_key'           => $old_options['indexnow_key'], 
                 'google_json_key'        => $final_json_key,
             );
-            update_option( 'saiteki_settings', $new_settings );
+            saiteki_update_setting( 'saiteki_settings', $new_settings );
             $old_options = $new_settings;
             echo '<div class="notice notice-success is-dismissible" style="margin-left:0; margin-bottom: 20px;"><p>✅ <strong>Saiteki SEO:</strong> ' . esc_html__( 'Settings successfully saved!', 'saiteki' ) . '</p></div>';
         }
@@ -271,7 +271,7 @@ class Saiteki_Admin {
                             </div>
                             
                             <div class="saiteki-api-box" style="border-bottom: none;">
-                                <label style="display:block; font-weight:bold;">Google Indexing JSON(s) <span class="hydro-badge" style="background:#10b981;"><?php echo esc_html( get_option('saiteki_google_key_count', 1) ); ?> <?php esc_html_e( 'active', 'saiteki' ); ?></span></label>
+                                <label style="display:block; font-weight:bold;">Google Indexing JSON(s) <span class="hydro-badge" style="background:#10b981;"><?php echo esc_html( saiteki_get_setting('saiteki_google_key_count', 1) ); ?> <?php esc_html_e( 'active', 'saiteki' ); ?></span></label>
                                 <p style="font-size:12px; color:var(--muted); margin:4px 0 8px;"><?php echo wp_kses_post( __( 'For <b>Multi-Key Rotation</b> (limit bypass), you can simply copy the contents of any number of JSON files directly one after the other into this field.', 'saiteki' ) ); ?></p>
                                 <textarea name="saiteki_settings[google_json_key]" class="saiteki-textarea" rows="3" placeholder="<?php esc_attr_e( 'Paste multiple JSONs here one below the other...', 'saiteki' ); ?>"><?php echo !empty($old_options['google_json_key']) ? '--- ENCRYPTED KEYS SAVED ---' : ''; ?></textarea>
                             </div>
