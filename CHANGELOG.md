@@ -42,6 +42,9 @@ All notable changes to this project are documented in this file.
 - Uninstall also removes the remembered Hydro slugs.
 - Updater: the bundled update checker is always loaded (no longer skipped when another plugin loaded its own copy), and the plugin declares an `Update URI`, so wordpress.org can never offer a foreign plugin with the same slug as an update.
 
+### Removed
+- The optional `SAITEKI_GITHUB_TOKEN` constant for the update checker. The repository is public and needs no token.
+
 ### Upgrade notes
 - The migration runs automatically on the first request after the update.
 - A downgrade to 1.x is possible, but the Google keys have to be pasted again.
