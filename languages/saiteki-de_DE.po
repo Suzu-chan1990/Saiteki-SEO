@@ -1,82 +1,800 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Saiteki SEO 1.1.0\n"
+"Project-Id-Version: Saiteki SEO 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Suzu-chan1990/Saiteki-SEO/issues\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: saiteki\n"
 
 msgid "Saiteki SEO"
 msgstr "Saiteki SEO"
 
-msgid "Saiteki"
-msgstr "Saiteki"
+msgid "Settings"
+msgstr "Einstellungen"
 
-msgid "Settings successfully saved!"
-msgstr "Einstellungen erfolgreich gespeichert!"
+msgid "Saved"
+msgstr "Gespeichert"
 
-msgid "Save Settings"
-msgstr "Einstellungen speichern"
+msgid "Error"
+msgstr "Fehler"
 
-msgid "🩺 SEO Health Audit"
-msgstr "🩺 SEO Health Audit"
+msgid "Working…"
+msgstr "Arbeite…"
 
-msgid "Videos without featured image (Thumbnail):"
-msgstr "Videos ohne Vorschaubild (Thumbnail):"
+msgid "Copied"
+msgstr "Kopiert"
 
-msgid "Videos with extremely short description (< 100 characters):"
-msgstr "Videos mit extrem kurzer Beschreibung (< 100 Zeichen):"
+msgid "XML Sitemap"
+msgstr "XML-Sitemap"
 
-msgid "Note: If you no longer need these checks, disable them in the \"Core Modules\" tab to completely stop the database queries."
-msgstr "Hinweis: Wenn du diese Checks nicht mehr brauchst, deaktiviere sie im \"Core Module\" Tab, um die Datenbankabfragen komplett zu stoppen."
+msgid "Custom path, file names, image and video extensions"
+msgstr "Eigener Pfad, Dateinamen, Bild- und Video-Erweiterungen"
 
-msgid "Background Processes"
-msgstr "Hintergrund-Prozesse"
+msgid "Path & Files"
+msgstr "Pfad & Dateien"
 
-msgid "SEO Audit: Missing Thumbnails"
-msgstr "SEO Audit: Fehlende Thumbnails"
+msgid "Content"
+msgstr "Inhalt"
 
-msgid "Checks the database for videos without their own featured image and shows the result in the dashboard."
-msgstr "Prüft die Datenbank auf Videos ohne eigenes Beitragsbild und zeigt das Ergebnis im Dashboard an."
+msgid "Frontend SEO"
+msgstr "Frontend-SEO"
 
-msgid "Optional"
-msgstr "Optional"
+msgid "Meta tags, Open Graph, Twitter cards, JSON-LD, titles"
+msgstr "Meta-Tags, Open Graph, Twitter Cards, JSON-LD, Titel"
 
-msgid "SEO Audit: Short Descriptions"
-msgstr "SEO Audit: Kurze Beschreibungen"
+msgid "Meta & Social"
+msgstr "Meta & Social"
 
-msgid "Checks the database for posts with less than 100 characters of text content."
-msgstr "Prüft die Datenbank auf Beiträge mit weniger als 100 Zeichen Textinhalt."
+msgid "Schema & Titles"
+msgstr "Schema & Titel"
 
-msgid "Frontend Tags"
-msgstr "Frontend Tags"
+msgid "Instant Indexing"
+msgstr "Sofort-Indexierung"
+
+msgid "IndexNow, Google Indexing API with key rotation, Hydro bridge"
+msgstr "IndexNow, Google Indexing API mit Key-Rotation, Hydro-Bridge"
+
+msgid "IndexNow"
+msgstr "IndexNow"
+
+msgid "Google Indexing API"
+msgstr "Google Indexing API"
+
+msgid "Hydro Bridge"
+msgstr "Hydro-Bridge"
+
+msgid "Tools"
+msgstr "Werkzeuge"
+
+msgid "SEO health audit, system information"
+msgstr "SEO Health Audit, Systeminformationen"
+
+msgid "Health Audit"
+msgstr "Health Audit"
+
+msgid "System"
+msgstr "System"
+
+msgid "You are not allowed to do this."
+msgstr "Dazu fehlt dir die Berechtigung."
+
+msgid "Unknown setting."
+msgstr "Unbekannte Einstellung."
+
+msgid "The index file name collides with the names of the sub-sitemaps. Choose a different index name or prefix."
+msgstr "Der Dateiname des Index kollidiert mit den Namen der Unter-Sitemaps. Wähle einen anderen Index-Namen oder ein anderes Präfix."
+
+msgid "Sitemap moved to %s"
+msgstr "Sitemap verschoben nach %s"
+
+msgid "Nothing was saved: no valid service account JSON with a readable private key was found. The existing keys were kept."
+msgstr "Es wurde nichts gespeichert: Kein gültiges Service-Account-JSON mit lesbarem Private Key gefunden. Die bisherigen Keys bleiben erhalten."
+
+msgid "Unknown form."
+msgstr "Unbekanntes Formular."
+
+msgid "The server could not request its own sitemap: %s"
+msgstr "Der Server konnte seine eigene Sitemap nicht abrufen: %s"
+
+msgid "Not reachable: HTTP %d. If the web server answers .xml requests itself, they must be passed on to WordPress (index.php)."
+msgstr "Nicht erreichbar: HTTP %d. Falls der Webserver .xml-Anfragen selbst beantwortet, müssen sie an WordPress (index.php) weitergereicht werden."
+
+msgid "The sitemap index will be rebuilt on the next request."
+msgstr "Der Sitemap-Index wird beim nächsten Abruf neu aufgebaut."
+
+msgid "The previous location is no longer redirected."
+msgstr "Der vorherige Pfad wird nicht mehr weitergeleitet."
+
+msgid "A new IndexNow key was generated."
+msgstr "Ein neuer IndexNow-Key wurde erzeugt."
+
+msgid "No IndexNow key available."
+msgstr "Kein IndexNow-Key vorhanden."
+
+msgid "IndexNow accepted the home page (HTTP %d)."
+msgstr "IndexNow hat die Startseite angenommen (HTTP %d)."
+
+msgid "IndexNow answered with HTTP 429 (too many requests). The key and the setup are fine: IndexNow is throttling this site at the moment, usually after many single requests in a short time, for example during a bulk import. Try again later."
+msgstr "IndexNow antwortete mit HTTP 429 (zu viele Anfragen). Key und Einrichtung sind in Ordnung: IndexNow drosselt diese Seite gerade, meist nach vielen Einzelanfragen in kurzer Zeit, zum Beispiel während eines Massenimports. Versuch es später noch einmal."
+
+msgid "IndexNow answered with HTTP 403: the key file could not be verified. Open the key file URL and check that it shows the key."
+msgstr "IndexNow antwortete mit HTTP 403: Die Key-Datei konnte nicht geprüft werden. Öffne die URL der Key-Datei und prüfe, ob sie den Key anzeigt."
+
+msgid "IndexNow answered with HTTP 422: the URL does not belong to this host, or the key does not match."
+msgstr "IndexNow antwortete mit HTTP 422: Die URL gehört nicht zu diesem Host oder der Key passt nicht."
+
+msgid "IndexNow answered with HTTP %d."
+msgstr "IndexNow antwortete mit HTTP %d."
+
+msgid "OK: Google issued an access token for this key."
+msgstr "OK: Google hat für diesen Key ein Access-Token ausgestellt."
+
+msgid "This key does not exist any more."
+msgstr "Diesen Key gibt es nicht mehr."
+
+msgid "Key removed."
+msgstr "Key entfernt."
+
+msgid "All Google keys were removed."
+msgstr "Alle Google-Keys wurden entfernt."
+
+msgid "Audit refreshed."
+msgstr "Audit aktualisiert."
+
+msgid "Unknown action."
+msgstr "Unbekannte Aktion."
+
+msgid "Search engines are blocked"
+msgstr "Suchmaschinen sind ausgesperrt"
+
+msgid "Settings > Reading discourages search engines from indexing this site. Nothing else matters until this is switched off."
+msgstr "Unter Einstellungen > Lesen werden Suchmaschinen davon abgehalten, diese Seite zu indexieren. Solange das aktiv ist, bringt alles andere nichts."
+
+msgid "Open Reading settings"
+msgstr "Lese-Einstellungen öffnen"
+
+msgid "Plain permalinks are active"
+msgstr "Einfache Permalinks sind aktiv"
+
+msgid "The sitemap and readable URLs need a permalink structure."
+msgstr "Die Sitemap und lesbare URLs brauchen eine Permalink-Struktur."
+
+msgid "Open Permalinks"
+msgstr "Permalinks öffnen"
+
+msgid "Enable the XML sitemap"
+msgstr "XML-Sitemap aktivieren"
+
+msgid "Without a sitemap, search engines discover new videos much more slowly."
+msgstr "Ohne Sitemap finden Suchmaschinen neue Videos deutlich langsamer."
+
+msgid "Review sitemap"
+msgstr "Sitemap prüfen"
+
+msgid "Another SEO plugin is active"
+msgstr "Ein weiteres SEO-Plugin ist aktiv"
+
+msgid "%s prints the same tags. Disable the overlapping features to avoid duplicates."
+msgstr "%s gibt dieselben Tags aus. Deaktiviere die überschneidenden Funktionen, um Duplikate zu vermeiden."
+
+msgid "Open Plugins"
+msgstr "Plugins öffnen"
+
+msgid "Announce the sitemap in robots.txt"
+msgstr "Sitemap in der robots.txt angeben"
+
+msgid "Crawlers find the sitemap on their own when robots.txt points to it."
+msgstr "Crawler finden die Sitemap von selbst, wenn die robots.txt darauf verweist."
+
+msgid "Enable JSON-LD schema"
+msgstr "JSON-LD-Schema aktivieren"
+
+msgid "VideoObject markup is required for video rich results."
+msgstr "VideoObject-Markup ist Voraussetzung für Video-Rich-Results."
+
+msgid "Review schema"
+msgstr "Schema prüfen"
+
+msgid "Twitter player cards are off"
+msgstr "Twitter Player Cards sind aus"
+
+msgid "Optional: shared links show a large image instead of an inline player."
+msgstr "Optional: Geteilte Links zeigen ein großes Bild statt eines eingebetteten Players."
+
+msgid "Configure"
+msgstr "Einrichten"
+
+msgid "Enable instant indexing"
+msgstr "Sofort-Indexierung aktivieren"
+
+msgid "New videos are reported to search engines the moment they are published."
+msgstr "Neue Videos werden Suchmaschinen sofort beim Veröffentlichen gemeldet."
+
+msgid "Review indexing"
+msgstr "Indexierung prüfen"
+
+msgid "IndexNow key is missing"
+msgstr "IndexNow-Key fehlt"
+
+msgid "Generate a new key so IndexNow requests can be verified."
+msgstr "Erzeuge einen neuen Key, damit IndexNow-Anfragen geprüft werden können."
+
+msgid "Review IndexNow"
+msgstr "IndexNow prüfen"
+
+msgid "Google keys cannot be decrypted"
+msgstr "Google-Keys lassen sich nicht entschlüsseln"
+
+msgid "The stored keys were encrypted with different wp-config.php salts. Paste the service account JSON files again."
+msgstr "Die gespeicherten Keys wurden mit anderen wp-config.php-Salts verschlüsselt. Füge die Service-Account-JSON-Dateien erneut ein."
+
+msgid "Review keys"
+msgstr "Keys prüfen"
+
+msgid "OPTIMAL"
+msgstr "OPTIMAL"
+
+msgid "The core SEO modules are active and no critical condition was detected."
+msgstr "Die zentralen SEO-Module sind aktiv, es wurde nichts Kritisches festgestellt."
+
+msgid "ATTENTION"
+msgstr "ACHTUNG"
+
+msgid "Some modules are switched off or need a look."
+msgstr "Einige Module sind ausgeschaltet oder brauchen einen Blick."
+
+msgid "CRITICAL"
+msgstr "KRITISCH"
+
+msgid "Important SEO basics are missing. Review the recommendations below."
+msgstr "Wichtige SEO-Grundlagen fehlen. Sieh dir die Empfehlungen unten an."
+
+msgid "Copy"
+msgstr "Kopieren"
+
+msgid "Open"
+msgstr "Öffnen"
+
+msgid "Switch it on"
+msgstr "Einschalten"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Video sitemap extension"
+msgstr "Video-Erweiterung der Sitemap"
+
+msgid "JSON-LD Schema"
+msgstr "JSON-LD-Schema"
+
+msgid "Twitter Player Cards"
+msgstr "Twitter Player Cards"
 
 msgid "Dynamic Titles"
 msgstr "Dynamische Titel"
 
-msgid "APIs & Indexing"
-msgstr "APIs & Indexing"
+msgid "Noindex tag archives"
+msgstr "Schlagwort-Archive auf noindex"
 
-msgid "Connected"
-msgstr "Verbunden"
+msgid "SEO Status"
+msgstr "SEO-Status"
 
-msgid "active"
-msgstr "aktiv"
+msgid "score"
+msgstr "Score"
 
-msgid "For <b>Multi-Key Rotation</b> (limit bypass), you can simply copy the contents of any number of JSON files directly one after the other into this field."
-msgstr "Für <b>Multi-Key Rotation</b> (Limit-Bypass) kannst du den Inhalt von beliebig vielen JSON-Dateien einfach direkt nacheinander in dieses Feld kopieren."
+msgid "Visible to search engines"
+msgstr "Für Suchmaschinen sichtbar"
+
+msgid "Hidden from search engines"
+msgstr "Für Suchmaschinen verborgen"
+
+msgid "%1$d / %2$d modules"
+msgstr "%1$d / %2$d Module"
+
+msgid "Recommended actions"
+msgstr "Empfohlene Schritte"
+
+msgid "Nothing to do. Everything that matters is switched on."
+msgstr "Nichts zu tun. Alles Wichtige ist eingeschaltet."
+
+msgid "Important"
+msgstr "Wichtig"
+
+msgid "Optional"
+msgstr "Optional"
+
+msgid "Recommended"
+msgstr "Empfohlen"
+
+msgid "Sitemap"
+msgstr "Sitemap"
+
+msgid "Virtual files, generated on request. Nothing is written to disk."
+msgstr "Virtuelle Dateien, die beim Abruf erzeugt werden. Es wird nichts auf die Platte geschrieben."
+
+msgid "Change path"
+msgstr "Pfad ändern"
+
+msgid "Index"
+msgstr "Index"
+
+msgid "Pages"
+msgstr "Seiten"
+
+msgid "Latest posts"
+msgstr "Neueste Beiträge"
+
+msgid "Test reachability"
+msgstr "Erreichbarkeit testen"
+
+msgid "The sitemap engine is switched off. WordPress serves its own sitemap instead."
+msgstr "Die Sitemap-Engine ist ausgeschaltet. WordPress liefert stattdessen seine eigene Sitemap aus."
+
+msgid "Published videos"
+msgstr "Veröffentlichte Videos"
+
+msgid "Posts in the sitemap"
+msgstr "Beiträge in der Sitemap"
+
+msgid "Sitemap files"
+msgstr "Sitemap-Dateien"
+
+msgid "%s posts per file"
+msgstr "%s Beiträge pro Datei"
+
+msgid "Google keys"
+msgstr "Google-Keys"
+
+msgid "Rotation active"
+msgstr "Rotation aktiv"
+
+msgid "Indexing API"
+msgstr "Indexing API"
+
+msgid "On"
+msgstr "An"
+
+msgid "Off"
+msgstr "Aus"
+
+msgid "Bing, Yandex, Seznam, Naver"
+msgstr "Bing, Yandex, Seznam, Naver"
+
+msgid "Modules"
+msgstr "Module"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "SEO Health Audit"
+msgstr "SEO Health Audit"
+
+msgid "The audit is switched off, so it costs no database queries."
+msgstr "Das Audit ist ausgeschaltet und kostet damit keine Datenbankabfragen."
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Videos without featured image"
+msgstr "Videos ohne Beitragsbild"
+
+msgid "Videos with a very short description (< 100 characters)"
+msgstr "Videos mit sehr kurzer Beschreibung (< 100 Zeichen)"
+
+msgid "Sitemap Engine"
+msgstr "Sitemap-Engine"
+
+msgid "High-performance XML sitemap"
+msgstr "High-Performance-XML-Sitemap"
+
+msgid "Replaces the WordPress core sitemap. Posts are listed oldest first, so a new post only changes the last file."
+msgstr "Ersetzt die WordPress-eigene Sitemap. Beiträge stehen vom ältesten zum neuesten, ein neuer Beitrag ändert also nur die letzte Datei."
+
+msgid "Announce in robots.txt"
+msgstr "In der robots.txt angeben"
+
+msgid "Adds a \"Sitemap:\" line with the index URL to the virtual robots.txt."
+msgstr "Ergänzt die virtuelle robots.txt um eine „Sitemap:“-Zeile mit der Index-URL."
+
+msgid "A physical robots.txt file exists in the site root. WordPress cannot change it: update its \"Sitemap:\" line by hand after changing the path."
+msgstr "Im Webroot liegt eine echte robots.txt-Datei. WordPress kann sie nicht ändern: Passe die „Sitemap:“-Zeile nach einer Pfadänderung von Hand an."
+
+msgid "Custom Path"
+msgstr "Eigener Pfad"
+
+msgid "Choose where the sitemap lives. The path is virtual: no folders or files are created, so it works with renamed upload or content directories as well."
+msgstr "Lege fest, wo die Sitemap liegt. Der Pfad ist virtuell: Es werden keine Ordner oder Dateien angelegt, deshalb funktioniert er auch mit umbenannten Upload- oder Content-Verzeichnissen."
+
+msgid "Directory"
+msgstr "Verzeichnis"
+
+msgid "(site root)"
+msgstr "(Webroot)"
+
+msgid "Leave empty for the site root. Sub-folders are allowed, for example \"media/sitemaps\"."
+msgstr "Leer lassen für den Webroot. Unterordner sind erlaubt, zum Beispiel „media/sitemaps“."
+
+msgid "Index file name"
+msgstr "Dateiname des Index"
+
+msgid "Prefix of the sub-sitemaps"
+msgstr "Präfix der Unter-Sitemaps"
+
+msgid "Preview"
+msgstr "Vorschau"
+
+msgid "Save path"
+msgstr "Pfad speichern"
+
+msgid "Current Files"
+msgstr "Aktuelle Dateien"
+
+msgid "The sitemap engine is switched off, these URLs are not served."
+msgstr "Die Sitemap-Engine ist ausgeschaltet, diese URLs werden nicht ausgeliefert."
+
+msgid "Posts 1"
+msgstr "Beiträge 1"
+
+msgid "Posts %d"
+msgstr "Beiträge %d"
+
+msgid "%1$s published posts in %2$s post files."
+msgstr "%1$s veröffentlichte Beiträge in %2$s Beitragsdateien."
+
+msgid "Previous Location"
+msgstr "Vorheriger Pfad"
+
+msgid "Redirect the old path (301)"
+msgstr "Alten Pfad weiterleiten (301)"
+
+msgid "After a path change, requests to the previous location are forwarded to the new one."
+msgstr "Nach einer Pfadänderung werden Abrufe des vorherigen Pfads auf den neuen weitergeleitet."
+
+msgid "Previous index:"
+msgstr "Vorheriger Index:"
+
+msgid "Forget previous location"
+msgstr "Vorherigen Pfad vergessen"
+
+msgid "The path has not been changed yet."
+msgstr "Der Pfad wurde bisher nicht geändert."
+
+msgid "After moving the sitemap, submit the new index URL in Google Search Console and Bing Webmaster Tools."
+msgstr "Reiche die neue Index-URL nach dem Verschieben in der Google Search Console und den Bing Webmaster Tools ein."
+
+msgid "Media Extensions"
+msgstr "Medien-Erweiterungen"
+
+msgid "Video entries"
+msgstr "Video-Einträge"
+
+msgid "Adds title, description, thumbnail and player URL for every post with a video."
+msgstr "Ergänzt Titel, Beschreibung, Thumbnail und Player-URL für jeden Beitrag mit Video."
+
+msgid "Image entries"
+msgstr "Bild-Einträge"
+
+msgid "Adds the featured image of every post."
+msgstr "Ergänzt das Beitragsbild jedes Beitrags."
+
+msgid "Pages File"
+msgstr "Seiten-Datei"
+
+msgid "Static pages"
+msgstr "Statische Seiten"
+
+msgid "Published pages without a password."
+msgstr "Veröffentlichte Seiten ohne Passwort."
+
+msgid "Categories"
+msgstr "Kategorien"
+
+msgid "Category archives that contain at least one post."
+msgstr "Kategorie-Archive mit mindestens einem Beitrag."
+
+msgid "The home page is always listed. Tag archives are left out."
+msgstr "Die Startseite steht immer drin. Schlagwort-Archive bleiben außen vor."
+
+msgid "File Size"
+msgstr "Dateigröße"
+
+msgid "Posts per file"
+msgstr "Beiträge pro Datei"
+
+msgid "100 to 20,000. Changing this value moves posts between files, so search engines fetch every file again. 5,000 is a good balance."
+msgstr "100 bis 20.000. Eine Änderung verschiebt Beiträge zwischen den Dateien, Suchmaschinen holen dann jede Datei neu. 5.000 ist ein guter Mittelweg."
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Video Source"
+msgstr "Video-Quelle"
+
+msgid "Theme helper jpop_get_turbo_video()"
+msgstr "Theme-Helfer jpop_get_turbo_video()"
+
+msgid "Found"
+msgstr "Gefunden"
+
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+msgid "Without the helper, the first YouTube link in the post content is used. Other sources can be connected with the \"saiteki_video_data\" filter."
+msgstr "Ohne den Helfer wird der erste YouTube-Link im Beitragsinhalt verwendet. Andere Quellen lassen sich über den Filter „saiteki_video_data“ anbinden."
+
+msgid "Social Tags"
+msgstr "Social-Tags"
+
+msgid "Twitter player cards"
+msgstr "Twitter Player Cards"
+
+msgid "Video posts are shared with an inline player. When off, a large image card is used."
+msgstr "Video-Beiträge werden mit eingebettetem Player geteilt. Ausgeschaltet wird eine große Bild-Card verwendet."
+
+msgid "Meta description and Open Graph tags are always printed for posts, pages, the home page, categories and tags."
+msgstr "Meta-Description und Open-Graph-Tags werden immer ausgegeben: für Beiträge, Seiten, Startseite, Kategorien und Schlagwörter."
+
+msgid "Crawling"
+msgstr "Crawling"
+
+msgid "Tag archives get \"noindex, follow\", so the crawl budget goes to the videos."
+msgstr "Schlagwort-Archive bekommen „noindex, follow“, damit das Crawl-Budget bei den Videos landet."
+
+msgid "Conflicts"
+msgstr "Konflikte"
+
+msgid "Structured Data"
+msgstr "Strukturierte Daten"
+
+msgid "JSON-LD schema"
+msgstr "JSON-LD-Schema"
+
+msgid "VideoObject and BreadcrumbList on posts, ItemList on the home page and on categories."
+msgstr "VideoObject und BreadcrumbList bei Beiträgen, ItemList auf der Startseite und in Kategorien."
+
+msgid "Titles"
+msgstr "Titel"
+
+msgid "Dynamic titles"
+msgstr "Dynamische Titel"
+
+msgid "Appends a suffix to the browser title of single posts."
+msgstr "Hängt an den Browser-Titel einzelner Beiträge einen Zusatz an."
+
+msgid "Title suffix"
+msgstr "Titel-Zusatz"
+
+msgid "{year} is replaced by the current year. Example: \"Video {year}\"."
+msgstr "{year} wird durch das aktuelle Jahr ersetzt. Beispiel: „Video {year}“."
+
+msgid "Report new posts"
+msgstr "Neue Beiträge melden"
+
+msgid "Master switch for IndexNow and the Google Indexing API. A post is reported once, when it is published. IndexNow receives all posts of one request or import run in a single batch."
+msgstr "Hauptschalter für IndexNow und die Google Indexing API. Ein Beitrag wird einmal gemeldet, beim Veröffentlichen. IndexNow bekommt alle Beiträge eines Aufrufs oder Importlaufs gesammelt in einer Anfrage."
+
+msgid "No readable key is stored. Generate a new one."
+msgstr "Es ist kein lesbarer Key gespeichert. Erzeuge einen neuen."
+
+msgid "Key"
+msgstr "Key"
+
+msgid "Key file"
+msgstr "Key-Datei"
+
+msgid "The key file is virtual and proves to IndexNow that this site sent the request. It is public by design."
+msgstr "Die Key-Datei ist virtuell und beweist IndexNow, dass die Anfrage von dieser Seite kommt. Sie ist absichtlich öffentlich."
+
+msgid "Send test request"
+msgstr "Testanfrage senden"
+
+msgid "Generate new key"
+msgstr "Neuen Key erzeugen"
+
+msgid "Generate a new IndexNow key? The old key file stops working immediately."
+msgstr "Neuen IndexNow-Key erzeugen? Die alte Key-Datei funktioniert dann sofort nicht mehr."
+
+msgid "Stored Keys"
+msgstr "Gespeicherte Keys"
+
+msgid "Instant indexing is switched off, the keys are not used."
+msgstr "Die Sofort-Indexierung ist ausgeschaltet, die Keys werden nicht benutzt."
+
+msgid "Keys are stored but cannot be decrypted: the wp-config.php salts have changed since they were saved. Paste the service account JSON files again."
+msgstr "Es sind Keys gespeichert, sie lassen sich aber nicht entschlüsseln: Die wp-config.php-Salts haben sich seit dem Speichern geändert. Füge die Service-Account-JSON-Dateien erneut ein."
+
+msgid "No keys stored yet. The Google Indexing API is not used."
+msgstr "Noch keine Keys gespeichert. Die Google Indexing API wird nicht benutzt."
+
+msgid "Service account"
+msgstr "Service-Account"
+
+msgid "Project"
+msgstr "Projekt"
+
+msgid "Rotation"
+msgstr "Rotation"
+
+msgid "Next"
+msgstr "Nächster"
+
+msgid "Test"
+msgstr "Testen"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Remove this key?"
+msgstr "Diesen Key entfernen?"
+
+msgid "Remove all keys"
+msgstr "Alle Keys entfernen"
+
+msgid "Remove all Google keys?"
+msgstr "Alle Google-Keys entfernen?"
+
+msgid "Rotation: every published post uses the next key in the list (round robin), so the daily quota of each key is spread evenly. The private keys are stored encrypted (AES-256-GCM) and are never shown again."
+msgstr "Rotation: Jeder veröffentlichte Beitrag nutzt den nächsten Key der Liste (Round Robin), so verteilt sich das Tageslimit gleichmäßig auf alle Keys. Die Private Keys werden verschlüsselt gespeichert (AES-256-GCM) und nie wieder angezeigt."
+
+msgid "Add Keys"
+msgstr "Keys hinzufügen"
+
+msgid "Paste the contents of one or more service account JSON files, simply one after the other."
+msgstr "Füge den Inhalt einer oder mehrerer Service-Account-JSON-Dateien ein, einfach direkt nacheinander."
 
 msgid "Paste multiple JSONs here one below the other..."
 msgstr "Mehrere JSONs hier untereinander einfügen..."
 
-msgid "Watch %s on vTubes.tokyo."
-msgstr "Schau dir %s auf vTubes.tokyo an."
+msgid "Replace the stored keys (rotation starts again at key 1)"
+msgstr "Gespeicherte Keys ersetzen (Rotation beginnt wieder bei Key 1)"
 
-msgid "All videos from the category %s on vTubes.tokyo."
-msgstr "Alle Videos aus der Kategorie %s auf vTubes.tokyo."
+msgid "Add to the stored keys"
+msgstr "Zu den gespeicherten Keys hinzufügen"
+
+msgid "Save keys"
+msgstr "Keys speichern"
+
+msgid "Hydro Shortlinks"
+msgstr "Hydro Shortlinks"
+
+msgid "Hydro Shortlinks plugin"
+msgstr "Plugin Hydro Shortlinks"
+
+msgid "Connected"
+msgstr "Verbunden"
+
+msgid "Not active"
+msgstr "Nicht aktiv"
+
+msgid "Hydro bridge"
+msgstr "Hydro-Bridge"
+
+msgid "Uses the Hydro short URL as rel=\"shortlink\" of every post. The setting is kept while Hydro is inactive."
+msgstr "Nutzt die Hydro-Kurz-URL als rel=\"shortlink\" jedes Beitrags. Die Einstellung bleibt erhalten, solange Hydro inaktiv ist."
+
+msgid "The short URL is looked up once per post and remembered, so Hydro's link table is not scanned on every page view. og:url always stays the canonical URL."
+msgstr "Die Kurz-URL wird pro Beitrag einmal nachgeschlagen und gemerkt, Hydros Link-Tabelle wird also nicht bei jedem Seitenaufruf durchsucht. og:url bleibt immer die kanonische URL."
+
+msgid "Checks"
+msgstr "Prüfungen"
+
+msgid "Missing thumbnails"
+msgstr "Fehlende Thumbnails"
+
+msgid "Counts published videos without their own featured image."
+msgstr "Zählt veröffentlichte Videos ohne eigenes Beitragsbild."
+
+msgid "Short descriptions"
+msgstr "Kurze Beschreibungen"
+
+msgid "Counts published posts with less than 100 characters of content and excerpt."
+msgstr "Zählt veröffentlichte Beiträge mit weniger als 100 Zeichen Inhalt und Auszug."
+
+msgid "Both checks scan the posts table. The result is cached for 15 minutes; switched off, they cost nothing."
+msgstr "Beide Prüfungen durchsuchen die Beitragstabelle. Das Ergebnis wird 15 Minuten zwischengespeichert; ausgeschaltet kosten sie nichts."
+
+msgid "Result"
+msgstr "Ergebnis"
+
+msgid "Switch on a check and reload the page to see the result."
+msgstr "Schalte eine Prüfung ein und lade die Seite neu, um das Ergebnis zu sehen."
+
+msgid "Counted %s ago."
+msgstr "Gezählt vor %s."
+
+msgid "Count again"
+msgstr "Neu zählen"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "PHP"
+msgstr "PHP"
+
+msgid "Settings table"
+msgstr "Einstellungs-Tabelle"
+
+msgid "missing"
+msgstr "fehlt"
+
+msgid "Autoloaded settings"
+msgstr "Automatisch geladene Einstellungen"
+
+msgid "Encrypted Google keys (not autoloaded)"
+msgstr "Verschlüsselte Google-Keys (nicht automatisch geladen)"
+
+msgid "Encryption"
+msgstr "Verschlüsselung"
+
+msgid "not available"
+msgstr "nicht verfügbar"
+
+msgid "Persistent object cache"
+msgstr "Persistenter Object Cache"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nein"
+
+msgid "Sitemap index cache"
+msgstr "Cache des Sitemap-Index"
+
+msgid "Built"
+msgstr "Aufgebaut"
+
+msgid "Empty (built on the next request)"
+msgstr "Leer (wird beim nächsten Abruf aufgebaut)"
+
+msgid "Permalink structure"
+msgstr "Permalink-Struktur"
+
+msgid "Plain"
+msgstr "Einfach"
+
+msgid "Maintenance"
+msgstr "Wartung"
+
+msgid "The sitemap index (file list with last-modified dates) is cached until content changes, at most 12 hours. Rebuild it after a bulk import that bypasses WordPress."
+msgstr "Der Sitemap-Index (Dateiliste mit Änderungsdaten) wird zwischengespeichert, bis sich Inhalte ändern, höchstens 12 Stunden. Baue ihn nach einem Massenimport neu auf, der an WordPress vorbeiläuft."
+
+msgid "Rebuild sitemap index"
+msgstr "Sitemap-Index neu aufbauen"
+
+msgid "All videos from the category %1$s on %2$s."
+msgstr "Alle Videos aus der Kategorie %1$s auf %2$s."
 
 msgid "Video archive for the tag %s"
 msgstr "Video-Archiv für das Schlagwort %s"
 
-msgid "Video of %s"
-msgstr "Video von %s"
+msgid "Watch %1$s on %2$s."
+msgstr "Schau dir %1$s auf %2$s an."
+
+msgid "Home"
+msgstr "Startseite"
+
+msgid "Google did not return an access token."
+msgstr "Google hat kein Access-Token zurückgegeben."
+
+msgid "The private key cannot be used for signing."
+msgstr "Mit dem Private Key lässt sich nicht signieren."
+
+msgid "%d key is active."
+msgid_plural "%d keys are active."
+msgstr[0] "%d Key ist aktiv."
+msgstr[1] "%d Keys sind aktiv."
+
+msgid "%d entry was skipped because it is not a valid service account JSON."
+msgid_plural "%d entries were skipped because they are not valid service account JSONs."
+msgstr[0] "%d Eintrag wurde übersprungen, weil er kein gültiges Service-Account-JSON ist."
+msgstr[1] "%d Einträge wurden übersprungen, weil sie keine gültigen Service-Account-JSONs sind."
+
+msgid "Reachable: HTTP 200, valid sitemap index with %d file."
+msgid_plural "Reachable: HTTP 200, valid sitemap index with %d files."
+msgstr[0] "Erreichbar: HTTP 200, gültiger Sitemap-Index mit %d Datei."
+msgstr[1] "Erreichbar: HTTP 200, gültiger Sitemap-Index mit %d Dateien."
+

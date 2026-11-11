@@ -1,86 +1,78 @@
-=== Saiteki SEO ===
-Contributors: Saguya
-Requires at least: 6.9
-Tested up to: 7.0
-Stable tag: 1.2.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+<p align="center"><img src="./assets/banner-1544x500.png" width="772" alt="Saiteki SEO"></p>
 
-Fast and lightweight SEO plugin for video-focused WordPress sites with dynamic schema, XML sitemaps, and built-in instant indexing support.
+# Saiteki SEO (最適)
 
-== Description ==
+Fast and lightweight SEO plugin for video-focused WordPress sites: dynamic schema, XML sitemaps on a custom path, and instant indexing with key rotation.
 
-Saiteki SEO (最適) is a performance-focused SEO engine built for video-heavy WordPress environments.
+Saiteki generates its output from existing post data. Nothing is stored per post, so the database does not grow with the number of videos.
 
-Instead of storing large amounts of redundant metadata, Saiteki generates SEO output dynamically based on existing post data. Structured data, Twitter Player Cards, and XML sitemaps are created on demand to reduce database overhead while maintaining compatibility with modern search engines.
+## Features
 
-The plugin includes optional instant indexing integrations and supports modern schema standards designed for video content platforms.
+| Area | What it does |
+| --- | --- |
+| **XML sitemap** | Index, pages file and post files with video and image extensions. Posts are ordered oldest first, so a new post only changes the last file. |
+| **Custom path** | Directory, index file name and file prefix are configurable. The files are virtual, nothing is written to disk. The previous location is redirected (301). |
+| **Frontend SEO** | Meta description, Open Graph, Twitter Player Cards, canonicals for archives, optional `noindex` for tag archives, title suffix. |
+| **Schema** | JSON-LD `VideoObject` and `BreadcrumbList` on posts, `ItemList` on the home page and categories. |
+| **Instant indexing** | IndexNow and the Google Indexing API. Any number of Google service accounts with round-robin rotation and a per-key test. |
+| **Integrations** | Hydro Shortlinks bridge (`rel="shortlink"`). |
+| **Tools** | Optional SEO health audit, system overview. |
 
-### Core Features
+## Requirements
 
-* Lightweight architecture with minimal database footprint
-* High-performance XML sitemap engine with video and image extensions
-* Dynamic JSON-LD schema generation (VideoObject, BreadcrumbList)
-* Open Graph and Twitter Player Card support
-* Instant indexing integrations (Google Indexing API & IndexNow)
-* Multi-key API rotation support
-* Optional SEO Health Audit dashboard
-* Integration support for Hydro shortlinks
+- WordPress 6.9 or newer
+- PHP 8.4 or newer with OpenSSL
+- A permalink structure other than "Plain"
 
-### Performance Philosophy
+## Installation
 
-Saiteki focuses on generating SEO data dynamically instead of storing large meta structures.
+1. Download the ZIP of the latest [release](https://github.com/Suzu-chan1990/Saiteki-SEO/releases).
+2. Upload it under **Plugins > Add New > Upload Plugin** and activate it.
+3. Open **Saiteki SEO** in the admin menu.
 
-### Security
+Updates are delivered through the built-in GitHub update checker.
 
-Sensitive API credentials can be stored in encrypted form before saving to the WordPress database.
+## Sitemap path
 
-== Installation ==
+Under **XML Sitemap > Path & Files**:
 
-1. Upload the `saiteki` folder to `/wp-content/plugins/`.
-2. Activate the plugin through the Plugins screen.
-3. Open the “Saiteki” menu in the WordPress dashboard.
-4. Enable and configure the modules you want to use.
+| Setting | Example | Result |
+| --- | --- | --- |
+| Directory | `media/sitemaps` | `https://example.com/media/sitemaps/…` (empty = site root) |
+| Index file name | `sitemap_index.xml` | `…/sitemap_index.xml` |
+| Prefix of the sub-sitemaps | `sitemap` | `…/sitemap-pages.xml`, `…/sitemap-1.xml`, … |
 
-== Frequently Asked Questions ==
+New installations use the site root. Sites updated from 1.x keep the URL they had.
 
-= Does Saiteki work alongside other SEO plugins? =
-Running multiple SEO plugins may create duplicate meta tags.
+The path is answered by WordPress. The web server must pass requests for files that do not exist to `index.php`, which is the normal permalink setup. The **Test reachability** button checks this.
 
-= What is Instant Indexing? =
-Saiteki can send indexing requests to supported APIs when new content is published.
+## Developer notes
 
-= Why are tag archives set to noindex? =
-This helps search engines prioritize primary content.
+```php
+// Provide the video of a post from your own source.
+add_filter( 'saiteki_video_data', function ( array $data, int $post_id ) {
+    $data['video_id'] = get_post_meta( $post_id, 'my_youtube_id', true );
+    return $data; // keys: video_id, views, duration (ISO 8601, e.g. PT3M21S)
+}, 10, 2 );
 
-# Changelog
+// Skip instant indexing for single posts.
+add_filter( 'saiteki_should_index', fn( $send, $post, $url ) => $send && ! has_tag( 'private', $post ), 10, 3 );
+```
 
-All notable changes to this project will be documented in this file.
+A GitHub token against API rate limits of the update checker can be set in `wp-config.php`:
 
-## [1.2.0]
+```php
+define( 'SAITEKI_GITHUB_TOKEN', 'github_pat_…' );
+```
 
-### Added
-- **Dedicated High-Performance Database Table**: Created a custom storage table (`wp_saiteki_settings`) to manage all plugin configurations and key rotation states, significantly reducing the size and clutter of the native `wp_options` table.
-- **High-Speed RAM Caching Engine**: Implemented an advanced internal caching layer combining static PHP variables and the WordPress Object Cache API (`wp_cache_get` / `wp_cache_set`). All settings are now fetched in a single database query per request, drastically optimizing Time to First Byte (TTFB) for high-volume traffic.
-- **Fail-Safe Passive Migration**: Integrated an intelligent runtime migration fallback. The plugin securely reads legacy data from `wp_options` if the custom table entry is missing, copies it seamlessly to the new structure, and preserves original entries to guarantee zero data loss on live production environments.
+## Data storage
 
-### Changed
-- **Google Indexing API Key Rotation Infrastructure**: Relocated separate tracking options (`saiteki_google_key_count` and `saiteki_google_key_index`) into the unified custom settings table architecture, fully streamlining database transactions during real-time API indexing requests.
-- **Under-the-Hood Option Handling**: Rewrote core configuration retrieval to leverage the new `saiteki_get_setting()` and `saiteki_update_setting()` framework instead of standard `get_option()` hooks.
+- Table `{prefix}saiteki_settings`: all settings. Google keys are stored encrypted (AES-256-GCM) in their own row.
+- Option `saiteki_settings_mirror`: autoloaded copy of the small settings, without keys.
+- Post meta `_saiteki_hydro_slug`: remembered Hydro slug (only with the Hydro bridge).
 
-= 1.1.2 =
+Deleting the plugin removes all of it.
 
-* Fixed Auto Upater
+## License
 
-= 1.1.1 =
-
-* Fixed admin health audit PHP closing tag bug
-
-= 1.1.0 =
-
-* Added full i18n translation support.
-* Introduced SEO Health Audit module.
-
-= 1.0.0 =
-
-* Initial release.
+GPL-2.0-or-later. See [LICENSE](./LICENSE). Changes are listed in [CHANGELOG.md](./CHANGELOG.md).

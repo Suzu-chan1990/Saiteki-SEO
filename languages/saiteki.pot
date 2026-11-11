@@ -1,0 +1,799 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Saiteki SEO 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Suzu-chan1990/Saiteki-SEO/issues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: saiteki\n"
+
+msgid "Saiteki SEO"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Saved"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Working…"
+msgstr ""
+
+msgid "Copied"
+msgstr ""
+
+msgid "XML Sitemap"
+msgstr ""
+
+msgid "Custom path, file names, image and video extensions"
+msgstr ""
+
+msgid "Path & Files"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Frontend SEO"
+msgstr ""
+
+msgid "Meta tags, Open Graph, Twitter cards, JSON-LD, titles"
+msgstr ""
+
+msgid "Meta & Social"
+msgstr ""
+
+msgid "Schema & Titles"
+msgstr ""
+
+msgid "Instant Indexing"
+msgstr ""
+
+msgid "IndexNow, Google Indexing API with key rotation, Hydro bridge"
+msgstr ""
+
+msgid "IndexNow"
+msgstr ""
+
+msgid "Google Indexing API"
+msgstr ""
+
+msgid "Hydro Bridge"
+msgstr ""
+
+msgid "Tools"
+msgstr ""
+
+msgid "SEO health audit, system information"
+msgstr ""
+
+msgid "Health Audit"
+msgstr ""
+
+msgid "System"
+msgstr ""
+
+msgid "You are not allowed to do this."
+msgstr ""
+
+msgid "Unknown setting."
+msgstr ""
+
+msgid "The index file name collides with the names of the sub-sitemaps. Choose a different index name or prefix."
+msgstr ""
+
+msgid "Sitemap moved to %s"
+msgstr ""
+
+msgid "Nothing was saved: no valid service account JSON with a readable private key was found. The existing keys were kept."
+msgstr ""
+
+msgid "Unknown form."
+msgstr ""
+
+msgid "The server could not request its own sitemap: %s"
+msgstr ""
+
+msgid "Not reachable: HTTP %d. If the web server answers .xml requests itself, they must be passed on to WordPress (index.php)."
+msgstr ""
+
+msgid "The sitemap index will be rebuilt on the next request."
+msgstr ""
+
+msgid "The previous location is no longer redirected."
+msgstr ""
+
+msgid "A new IndexNow key was generated."
+msgstr ""
+
+msgid "No IndexNow key available."
+msgstr ""
+
+msgid "IndexNow accepted the home page (HTTP %d)."
+msgstr ""
+
+msgid "IndexNow answered with HTTP 429 (too many requests). The key and the setup are fine: IndexNow is throttling this site at the moment, usually after many single requests in a short time, for example during a bulk import. Try again later."
+msgstr ""
+
+msgid "IndexNow answered with HTTP 403: the key file could not be verified. Open the key file URL and check that it shows the key."
+msgstr ""
+
+msgid "IndexNow answered with HTTP 422: the URL does not belong to this host, or the key does not match."
+msgstr ""
+
+msgid "IndexNow answered with HTTP %d."
+msgstr ""
+
+msgid "OK: Google issued an access token for this key."
+msgstr ""
+
+msgid "This key does not exist any more."
+msgstr ""
+
+msgid "Key removed."
+msgstr ""
+
+msgid "All Google keys were removed."
+msgstr ""
+
+msgid "Audit refreshed."
+msgstr ""
+
+msgid "Unknown action."
+msgstr ""
+
+msgid "Search engines are blocked"
+msgstr ""
+
+msgid "Settings > Reading discourages search engines from indexing this site. Nothing else matters until this is switched off."
+msgstr ""
+
+msgid "Open Reading settings"
+msgstr ""
+
+msgid "Plain permalinks are active"
+msgstr ""
+
+msgid "The sitemap and readable URLs need a permalink structure."
+msgstr ""
+
+msgid "Open Permalinks"
+msgstr ""
+
+msgid "Enable the XML sitemap"
+msgstr ""
+
+msgid "Without a sitemap, search engines discover new videos much more slowly."
+msgstr ""
+
+msgid "Review sitemap"
+msgstr ""
+
+msgid "Another SEO plugin is active"
+msgstr ""
+
+msgid "%s prints the same tags. Disable the overlapping features to avoid duplicates."
+msgstr ""
+
+msgid "Open Plugins"
+msgstr ""
+
+msgid "Announce the sitemap in robots.txt"
+msgstr ""
+
+msgid "Crawlers find the sitemap on their own when robots.txt points to it."
+msgstr ""
+
+msgid "Enable JSON-LD schema"
+msgstr ""
+
+msgid "VideoObject markup is required for video rich results."
+msgstr ""
+
+msgid "Review schema"
+msgstr ""
+
+msgid "Twitter player cards are off"
+msgstr ""
+
+msgid "Optional: shared links show a large image instead of an inline player."
+msgstr ""
+
+msgid "Configure"
+msgstr ""
+
+msgid "Enable instant indexing"
+msgstr ""
+
+msgid "New videos are reported to search engines the moment they are published."
+msgstr ""
+
+msgid "Review indexing"
+msgstr ""
+
+msgid "IndexNow key is missing"
+msgstr ""
+
+msgid "Generate a new key so IndexNow requests can be verified."
+msgstr ""
+
+msgid "Review IndexNow"
+msgstr ""
+
+msgid "Google keys cannot be decrypted"
+msgstr ""
+
+msgid "The stored keys were encrypted with different wp-config.php salts. Paste the service account JSON files again."
+msgstr ""
+
+msgid "Review keys"
+msgstr ""
+
+msgid "OPTIMAL"
+msgstr ""
+
+msgid "The core SEO modules are active and no critical condition was detected."
+msgstr ""
+
+msgid "ATTENTION"
+msgstr ""
+
+msgid "Some modules are switched off or need a look."
+msgstr ""
+
+msgid "CRITICAL"
+msgstr ""
+
+msgid "Important SEO basics are missing. Review the recommendations below."
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Switch it on"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Video sitemap extension"
+msgstr ""
+
+msgid "JSON-LD Schema"
+msgstr ""
+
+msgid "Twitter Player Cards"
+msgstr ""
+
+msgid "Dynamic Titles"
+msgstr ""
+
+msgid "Noindex tag archives"
+msgstr ""
+
+msgid "SEO Status"
+msgstr ""
+
+msgid "score"
+msgstr ""
+
+msgid "Visible to search engines"
+msgstr ""
+
+msgid "Hidden from search engines"
+msgstr ""
+
+msgid "%1$d / %2$d modules"
+msgstr ""
+
+msgid "Recommended actions"
+msgstr ""
+
+msgid "Nothing to do. Everything that matters is switched on."
+msgstr ""
+
+msgid "Important"
+msgstr ""
+
+msgid "Optional"
+msgstr ""
+
+msgid "Recommended"
+msgstr ""
+
+msgid "Sitemap"
+msgstr ""
+
+msgid "Virtual files, generated on request. Nothing is written to disk."
+msgstr ""
+
+msgid "Change path"
+msgstr ""
+
+msgid "Index"
+msgstr ""
+
+msgid "Pages"
+msgstr ""
+
+msgid "Latest posts"
+msgstr ""
+
+msgid "Test reachability"
+msgstr ""
+
+msgid "The sitemap engine is switched off. WordPress serves its own sitemap instead."
+msgstr ""
+
+msgid "Published videos"
+msgstr ""
+
+msgid "Posts in the sitemap"
+msgstr ""
+
+msgid "Sitemap files"
+msgstr ""
+
+msgid "%s posts per file"
+msgstr ""
+
+msgid "Google keys"
+msgstr ""
+
+msgid "Rotation active"
+msgstr ""
+
+msgid "Indexing API"
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Bing, Yandex, Seznam, Naver"
+msgstr ""
+
+msgid "Modules"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "SEO Health Audit"
+msgstr ""
+
+msgid "The audit is switched off, so it costs no database queries."
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Videos without featured image"
+msgstr ""
+
+msgid "Videos with a very short description (< 100 characters)"
+msgstr ""
+
+msgid "Sitemap Engine"
+msgstr ""
+
+msgid "High-performance XML sitemap"
+msgstr ""
+
+msgid "Replaces the WordPress core sitemap. Posts are listed oldest first, so a new post only changes the last file."
+msgstr ""
+
+msgid "Announce in robots.txt"
+msgstr ""
+
+msgid "Adds a \"Sitemap:\" line with the index URL to the virtual robots.txt."
+msgstr ""
+
+msgid "A physical robots.txt file exists in the site root. WordPress cannot change it: update its \"Sitemap:\" line by hand after changing the path."
+msgstr ""
+
+msgid "Custom Path"
+msgstr ""
+
+msgid "Choose where the sitemap lives. The path is virtual: no folders or files are created, so it works with renamed upload or content directories as well."
+msgstr ""
+
+msgid "Directory"
+msgstr ""
+
+msgid "(site root)"
+msgstr ""
+
+msgid "Leave empty for the site root. Sub-folders are allowed, for example \"media/sitemaps\"."
+msgstr ""
+
+msgid "Index file name"
+msgstr ""
+
+msgid "Prefix of the sub-sitemaps"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Save path"
+msgstr ""
+
+msgid "Current Files"
+msgstr ""
+
+msgid "The sitemap engine is switched off, these URLs are not served."
+msgstr ""
+
+msgid "Posts 1"
+msgstr ""
+
+msgid "Posts %d"
+msgstr ""
+
+msgid "%1$s published posts in %2$s post files."
+msgstr ""
+
+msgid "Previous Location"
+msgstr ""
+
+msgid "Redirect the old path (301)"
+msgstr ""
+
+msgid "After a path change, requests to the previous location are forwarded to the new one."
+msgstr ""
+
+msgid "Previous index:"
+msgstr ""
+
+msgid "Forget previous location"
+msgstr ""
+
+msgid "The path has not been changed yet."
+msgstr ""
+
+msgid "After moving the sitemap, submit the new index URL in Google Search Console and Bing Webmaster Tools."
+msgstr ""
+
+msgid "Media Extensions"
+msgstr ""
+
+msgid "Video entries"
+msgstr ""
+
+msgid "Adds title, description, thumbnail and player URL for every post with a video."
+msgstr ""
+
+msgid "Image entries"
+msgstr ""
+
+msgid "Adds the featured image of every post."
+msgstr ""
+
+msgid "Pages File"
+msgstr ""
+
+msgid "Static pages"
+msgstr ""
+
+msgid "Published pages without a password."
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Category archives that contain at least one post."
+msgstr ""
+
+msgid "The home page is always listed. Tag archives are left out."
+msgstr ""
+
+msgid "File Size"
+msgstr ""
+
+msgid "Posts per file"
+msgstr ""
+
+msgid "100 to 20,000. Changing this value moves posts between files, so search engines fetch every file again. 5,000 is a good balance."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Video Source"
+msgstr ""
+
+msgid "Theme helper jpop_get_turbo_video()"
+msgstr ""
+
+msgid "Found"
+msgstr ""
+
+msgid "Not found"
+msgstr ""
+
+msgid "Without the helper, the first YouTube link in the post content is used. Other sources can be connected with the \"saiteki_video_data\" filter."
+msgstr ""
+
+msgid "Social Tags"
+msgstr ""
+
+msgid "Twitter player cards"
+msgstr ""
+
+msgid "Video posts are shared with an inline player. When off, a large image card is used."
+msgstr ""
+
+msgid "Meta description and Open Graph tags are always printed for posts, pages, the home page, categories and tags."
+msgstr ""
+
+msgid "Crawling"
+msgstr ""
+
+msgid "Tag archives get \"noindex, follow\", so the crawl budget goes to the videos."
+msgstr ""
+
+msgid "Conflicts"
+msgstr ""
+
+msgid "Structured Data"
+msgstr ""
+
+msgid "JSON-LD schema"
+msgstr ""
+
+msgid "VideoObject and BreadcrumbList on posts, ItemList on the home page and on categories."
+msgstr ""
+
+msgid "Titles"
+msgstr ""
+
+msgid "Dynamic titles"
+msgstr ""
+
+msgid "Appends a suffix to the browser title of single posts."
+msgstr ""
+
+msgid "Title suffix"
+msgstr ""
+
+msgid "{year} is replaced by the current year. Example: \"Video {year}\"."
+msgstr ""
+
+msgid "Report new posts"
+msgstr ""
+
+msgid "Master switch for IndexNow and the Google Indexing API. A post is reported once, when it is published. IndexNow receives all posts of one request or import run in a single batch."
+msgstr ""
+
+msgid "No readable key is stored. Generate a new one."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "Key file"
+msgstr ""
+
+msgid "The key file is virtual and proves to IndexNow that this site sent the request. It is public by design."
+msgstr ""
+
+msgid "Send test request"
+msgstr ""
+
+msgid "Generate new key"
+msgstr ""
+
+msgid "Generate a new IndexNow key? The old key file stops working immediately."
+msgstr ""
+
+msgid "Stored Keys"
+msgstr ""
+
+msgid "Instant indexing is switched off, the keys are not used."
+msgstr ""
+
+msgid "Keys are stored but cannot be decrypted: the wp-config.php salts have changed since they were saved. Paste the service account JSON files again."
+msgstr ""
+
+msgid "No keys stored yet. The Google Indexing API is not used."
+msgstr ""
+
+msgid "Service account"
+msgstr ""
+
+msgid "Project"
+msgstr ""
+
+msgid "Rotation"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Remove this key?"
+msgstr ""
+
+msgid "Remove all keys"
+msgstr ""
+
+msgid "Remove all Google keys?"
+msgstr ""
+
+msgid "Rotation: every published post uses the next key in the list (round robin), so the daily quota of each key is spread evenly. The private keys are stored encrypted (AES-256-GCM) and are never shown again."
+msgstr ""
+
+msgid "Add Keys"
+msgstr ""
+
+msgid "Paste the contents of one or more service account JSON files, simply one after the other."
+msgstr ""
+
+msgid "Paste multiple JSONs here one below the other..."
+msgstr ""
+
+msgid "Replace the stored keys (rotation starts again at key 1)"
+msgstr ""
+
+msgid "Add to the stored keys"
+msgstr ""
+
+msgid "Save keys"
+msgstr ""
+
+msgid "Hydro Shortlinks"
+msgstr ""
+
+msgid "Hydro Shortlinks plugin"
+msgstr ""
+
+msgid "Connected"
+msgstr ""
+
+msgid "Not active"
+msgstr ""
+
+msgid "Hydro bridge"
+msgstr ""
+
+msgid "Uses the Hydro short URL as rel=\"shortlink\" of every post. The setting is kept while Hydro is inactive."
+msgstr ""
+
+msgid "The short URL is looked up once per post and remembered, so Hydro's link table is not scanned on every page view. og:url always stays the canonical URL."
+msgstr ""
+
+msgid "Checks"
+msgstr ""
+
+msgid "Missing thumbnails"
+msgstr ""
+
+msgid "Counts published videos without their own featured image."
+msgstr ""
+
+msgid "Short descriptions"
+msgstr ""
+
+msgid "Counts published posts with less than 100 characters of content and excerpt."
+msgstr ""
+
+msgid "Both checks scan the posts table. The result is cached for 15 minutes; switched off, they cost nothing."
+msgstr ""
+
+msgid "Result"
+msgstr ""
+
+msgid "Switch on a check and reload the page to see the result."
+msgstr ""
+
+msgid "Counted %s ago."
+msgstr ""
+
+msgid "Count again"
+msgstr ""
+
+msgid "WordPress"
+msgstr ""
+
+msgid "PHP"
+msgstr ""
+
+msgid "Settings table"
+msgstr ""
+
+msgid "missing"
+msgstr ""
+
+msgid "Autoloaded settings"
+msgstr ""
+
+msgid "Encrypted Google keys (not autoloaded)"
+msgstr ""
+
+msgid "Encryption"
+msgstr ""
+
+msgid "not available"
+msgstr ""
+
+msgid "Persistent object cache"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Sitemap index cache"
+msgstr ""
+
+msgid "Built"
+msgstr ""
+
+msgid "Empty (built on the next request)"
+msgstr ""
+
+msgid "Permalink structure"
+msgstr ""
+
+msgid "Plain"
+msgstr ""
+
+msgid "Maintenance"
+msgstr ""
+
+msgid "The sitemap index (file list with last-modified dates) is cached until content changes, at most 12 hours. Rebuild it after a bulk import that bypasses WordPress."
+msgstr ""
+
+msgid "Rebuild sitemap index"
+msgstr ""
+
+msgid "All videos from the category %1$s on %2$s."
+msgstr ""
+
+msgid "Video archive for the tag %s"
+msgstr ""
+
+msgid "Watch %1$s on %2$s."
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Google did not return an access token."
+msgstr ""
+
+msgid "The private key cannot be used for signing."
+msgstr ""
+
+msgid "%d key is active."
+msgid_plural "%d keys are active."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "%d entry was skipped because it is not a valid service account JSON."
+msgid_plural "%d entries were skipped because they are not valid service account JSONs."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Reachable: HTTP 200, valid sitemap index with %d file."
+msgid_plural "Reachable: HTTP 200, valid sitemap index with %d files."
+msgstr[0] ""
+msgstr[1] ""
+
