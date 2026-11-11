@@ -5,7 +5,7 @@
  * Update URI:        https://github.com/Suzu-chan1990/Saiteki-SEO/
  * Description:       Fast and lightweight SEO plugin for video-focused WordPress sites with dynamic schema, XML sitemaps on a custom path, and optional instant indexing support.
  * Version:           2.0.0
- * Requires at least: 6.9
+ * Requires at least: 7.1
  * Requires PHP:      8.4
  * Author:            Saguya
  * Author URI:        https://github.com/Suzu-chan1990
