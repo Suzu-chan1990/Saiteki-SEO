@@ -20,7 +20,7 @@ Saiteki generates its output from existing post data. Nothing is stored per post
 
 ## Requirements
 
-- WordPress 6.9 or newer
+- WordPress 7.1 or newer
 - PHP 8.4 or newer with OpenSSL
 - A permalink structure other than "Plain"
 
